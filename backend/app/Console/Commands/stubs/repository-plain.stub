@@ -11,6 +11,6 @@ class $CLASS$
 
 	public function __construct($MODEL$ $model)
 	{
-		$this->$$LOWER_MODEL$Model = $model;
+		$this->$LOWER_MODEL$Model = $model;
 	}
 }

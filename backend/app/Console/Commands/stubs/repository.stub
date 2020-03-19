@@ -11,49 +11,49 @@ class $CLASS$
 
 	public function __construct($MODEL$ $model)
 	{
-		$this->$$LOWER_MODEL$Model = $model;
+		$this->$LOWER_MODEL$Model = $model;
 	}
 
     public function find$MODEL$($id)
     {
-        $$LOWER_MODEL$ = $this->$$LOWER_MODEL$Model->find($id);
+        $$LOWER_MODEL$ = $this->$LOWER_MODEL$Model->find($id);
         
-        return convertFormat($$LOWER_MODEL$);
+        return $this->convertFormat($$LOWER_MODEL$);
     }
 
     public function findAll$MODEL$s()
     {
-        $$LOWER_MODEL$s = $this->$$LOWER_MODEL$Model->all();
+        $$LOWER_MODEL$s = $this->$LOWER_MODEL$Model->all();
         
-        return convertFormat($$LOWER_MODEL$s);
+        return $this->convertFormat($$LOWER_MODEL$s);
     }
 
     public function create$MODEL$(array $data)
     {
-        $new$MODEL$ = $this->$$LOWER_MODEL$Model;
+        $new$MODEL$ = $this->$LOWER_MODEL$Model;
         $new$MODEL$->create($data);
         
-        return convertFormat($new$MODEL$);
+        return $this->convertFormat($new$MODEL$);
     }
 
     public function firstOrCreate$MODEL$(array $data)
     {
-        $$LOWER_MODEL$ = $this->$$LOWER_MODEL$Model->firstOrCreate($data);
+        $$LOWER_MODEL$ = $this->$LOWER_MODEL$Model->firstOrCreate($data);
 
-        return convertFormat($$LOWER_MODEL$);
+        return $this->convertFormat($$LOWER_MODEL$);
     }
 
     public function update$MODEL$(array $data, $id)
     {
-        $$LOWER_MODEL$ = $this->$$LOWER_MODEL$Model->find($id);
+        $$LOWER_MODEL$ = $this->$LOWER_MODEL$Model->find($id);
         $$LOWER_MODEL$->update($data);
         
-        return convertFormat($$LOWER_MODEL$);
+        return $this->convertFormat($$LOWER_MODEL$);
     }
 
     public function delete$MODEL$($id)
     {
-        return $this->$$LOWER_MODEL$Model->find($id)->delete();
+        return $this->$LOWER_MODEL$Model->find($id)->delete();
     }
 
     protected function convertFormat($data)

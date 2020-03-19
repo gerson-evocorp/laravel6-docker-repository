@@ -11,7 +11,7 @@ class $CLASS$
 
 	public function __construct($REPOSITORY$ $repository)
 	{
-		$this->$$LOWER_REPOSITORY$ = $repository;
+		$this->$LOWER_REPOSITORY$ = $repository;
 	}
 
     public function create($request)

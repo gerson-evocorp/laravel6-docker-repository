@@ -1,0 +1,13 @@
+{
+    "name": "Entity",
+    "alias": "entity",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\Entity\\Providers\\EntityServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
