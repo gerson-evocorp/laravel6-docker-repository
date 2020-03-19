@@ -41,7 +41,7 @@ return [
             'provider' => 'users',
         ],
 
-        'api-user' => [
+        'api' => [
             'driver' => 'passport',
             'provider' => 'users',
             'hash' => false,
@@ -66,9 +66,9 @@ return [
     */
 
     'providers' => [
-        'api-user' => [
+        'users' => [
             'driver' => 'eloquent',
-            'model' => \Modules\Auth\Entities\User::class,
+            'model' => Modules\Auth\Entities\User::class,
         ],
 
         // 'users' => [

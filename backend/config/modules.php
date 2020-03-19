@@ -117,6 +117,7 @@ return [
             'test' => ['path' => 'Tests/Unit', 'generate' => true],
             'test-feature' => ['path' => 'Tests/Feature', 'generate' => true],
             'repository' => ['path' => 'Repositories', 'generate' => false],
+            'service' => ['path' => 'Services', 'generate' => false],
             'event' => ['path' => 'Events', 'generate' => false],
             'listener' => ['path' => 'Listeners', 'generate' => false],
             'policies' => ['path' => 'Policies', 'generate' => false],

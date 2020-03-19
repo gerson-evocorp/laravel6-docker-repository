@@ -1,0 +1,40 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Modules\$MODULE$\Repositories\$REPOSITORY$;
+
+
+class $CLASS$
+{
+    private $$LOWER_REPOSITORY$;
+
+	public function __construct($REPOSITORY$ $repository)
+	{
+		$this->$$LOWER_REPOSITORY$ = $repository;
+	}
+
+    public function create($request)
+    {
+        // validation code
+
+        // business rule
+        return null;
+    }
+
+    public function update($request)
+    {
+        // validation code
+
+        // business rule
+        return null;
+    }
+
+    public function delete($request)
+    {
+        // validation code
+
+        // business rule
+        return null;
+    }
+}

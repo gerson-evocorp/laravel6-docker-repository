@@ -1,0 +1,17 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Modules\$MODULE$\Repositories\$REPOSITORY$;
+
+
+class $CLASS$
+{
+    private $$LOWER_REPOSITORY$;
+
+	public function __construct($REPOSITORY$ $repository)
+	{
+		$this->$$LOWER_REPOSITORY$ = $repository;
+	}
+	
+}

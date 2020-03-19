@@ -1,0 +1,16 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Modules\$MODULE$\Entities\$MODEL$;
+
+
+class $CLASS$
+{
+    private $$LOWER_MODEL$Model;
+
+	public function __construct($MODEL$ $model)
+	{
+		$this->$$LOWER_MODEL$Model = $model;
+	}
+}

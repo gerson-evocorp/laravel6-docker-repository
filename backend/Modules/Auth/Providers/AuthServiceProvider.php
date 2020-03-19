@@ -4,8 +4,8 @@ namespace Modules\Auth\Providers;
 
 use Illuminate\Database\Eloquent\Factory;
 use Laravel\Passport\Passport;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -21,7 +21,6 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerViews();
         $this->registerFactories();
         $this->loadMigrationsFrom(module_path('Auth', 'Database/Migrations'));
-
         Passport::routes();
     }
 

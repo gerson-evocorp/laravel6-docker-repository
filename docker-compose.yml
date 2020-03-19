@@ -15,8 +15,12 @@ services:
       - pg-data:/var/lib/postgresql/data
     networks: 
       - laravel-network
-    env_file:
-      - ./backend/.env
+    environment: 
+      POSTGRES_USER: laravel
+      POSTGRES_PASSWORD: laravel
+      POSTGRES_DB: laravel
+    # env_file:
+    #   - ./backend/.env
     ports:
       - "8084:5432"
 
