@@ -12,7 +12,6 @@ services:
       - pg-data:/var/lib/postgresql/data
     networks: 
       - laravel-network
-    environment: 
     env_file:
       - ./backend/.env
     ports:
