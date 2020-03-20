@@ -25,7 +25,7 @@ class AuthController extends Controller
             'remember_me' => 'boolean'
         ]);
 
-        $response = $this->authService->loginUser($request);
+        // $response = $this->authService->loginUser($request);
 
         return response()->json($response);
     }

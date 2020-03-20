@@ -14,7 +14,10 @@
             ],
             "aliases": {
 
-            }
+            },
+            "dont-discover": [
+                "laravel/passport"
+            ]
         }
     },
     "autoload": {
@@ -23,6 +26,9 @@
         }
     },
     "require": {
-        "laravel/passport": "^8.4"
+        "laravel/passport": "^8.4",
+        "smartins/passport-multiauth": "^6.0",
+        "symfony/psr-http-message-bridge": "^2.0",
+        "zendframework/zend-diactoros": "^2.2"
     }
 }

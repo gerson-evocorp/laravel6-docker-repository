@@ -2,6 +2,7 @@
 
 namespace Modules\Auth\Providers;
 
+use Route;
 use Illuminate\Database\Eloquent\Factory;
 use Laravel\Passport\Passport;
 use Illuminate\Support\Facades\Gate;
@@ -22,7 +23,13 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerFactories();
         $this->loadMigrationsFrom(module_path('Auth', 'Database/Migrations'));
         Passport::routes();
-        Passport::personalAccessClientId(6);
+
+        // Middleware `oauth.providers` middleware defined on $routeMiddleware above
+        Route::group(['middleware' => 'oauth.providers'], function () {
+            Passport::routes(function ($router) {
+                return $router->forAccessTokens();
+            });
+        });
     }
 
     /**
@@ -105,6 +112,9 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return [];
+        return [
+            SMartins\PassportMultiauth\Providers\MultiauthServiceProvider::class,
+            Laravel\Passport\PassportServiceProvider::class,
+        ];
     }
 }

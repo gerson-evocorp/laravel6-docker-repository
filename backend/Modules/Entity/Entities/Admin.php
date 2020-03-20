@@ -7,7 +7,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use SMartins\PassportMultiauth\HasMultiAuthApiTokens;
 
-class User extends Authenticatable
+class Admin extends Authenticatable
 {
     use Notifiable, SoftDeletes, HasMultiAuthApiTokens;
 

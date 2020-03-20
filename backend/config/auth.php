@@ -44,7 +44,11 @@ return [
         'api' => [
             'driver' => 'passport',
             'provider' => 'users',
-            'hash' => false,
+        ],
+
+        'admin' => [
+            'driver' => 'passport',
+            'provider' => 'admins',
         ],
     ],
 
@@ -71,10 +75,11 @@ return [
             'model' => Modules\Entity\Entities\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        // ** New provider**
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => Modules\Entity\Entities\Admin::class,
+        ],
     ],
 
     /*

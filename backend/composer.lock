@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba82668761a037756c740c2e289794a3",
+    "content-hash": "4531b1ced0e26d2845e92e2a6b438ed5",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -2593,6 +2593,58 @@
                 "uuid"
             ],
             "time": "2020-02-21T04:36:14+00:00"
+        },
+        {
+            "name": "smartins/passport-multiauth",
+            "version": "v6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sfelix-martins/passport-multiauth.git",
+                "reference": "f394bc36bbca0bf728b751e4bcfcf311b9ec0e01"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sfelix-martins/passport-multiauth/zipball/f394bc36bbca0bf728b751e4bcfcf311b9ec0e01",
+                "reference": "f394bc36bbca0bf728b751e4bcfcf311b9ec0e01",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/passport": "^8.0",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "orchestra/database": "^4.0",
+                "orchestra/testbench": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SMartins\\PassportMultiauth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Martins",
+                    "email": "sfelix_martins@hotmail.com"
+                }
+            ],
+            "description": "Add support to multi-auth on Laravel Passport",
+            "keywords": [
+                "laravel",
+                "multi-auth",
+                "passport"
+            ],
+            "time": "2020-02-10T13:49:37+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
