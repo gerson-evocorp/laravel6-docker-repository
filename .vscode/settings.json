@@ -1,0 +1,27 @@
+{
+    "files.exclude": {
+        "**/.gitkeep": true,
+        "**/.gitattributes": true,
+        "**/artisan": true,
+        "**/phpunit.xml": true,
+        "**/server.php": true,
+        "**/webpack.mix.js": true,
+        "**/resources": true,
+        "**/.styleci.yml": true,
+        "**/package.json": true,
+        "**/vendor": false,
+        "**/.env.example": true,
+        "**/oauth-private.key": true,
+        "**/oauth-public.key": true,
+        "**/logs": true,
+        "**/framework": true,
+        "**/app/Http/Controllers": true,
+        "**/Kernel.php": true,
+        "**/bootstrap": true,
+        "**/composer.lock": true,
+        "**/.htaccess": true,
+        "**/robots.txt": true,
+        "**/web.config": true,
+        "**/.editorconfig": true,
+    }
+}

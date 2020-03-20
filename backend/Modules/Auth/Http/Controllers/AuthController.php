@@ -17,7 +17,7 @@ class AuthController extends Controller
 		$this->authService = $authService;
 	}
 
-    public function login(Request $request)
+    public function loginUser(Request $request)
     {
         $request->validate([
             'email' => 'required|string|email',
@@ -30,7 +30,7 @@ class AuthController extends Controller
         return response()->json($response);
     }
 
-    public function register(Request $request)
+    public function registerUser(Request $request)
     {
         $request->validate([
             'name' => 'required|string',
@@ -43,14 +43,5 @@ class AuthController extends Controller
         return response()->json([
             'message' => 'Account successfully created!'
         ], 201);
-    }
-
-    public function logout(Request $request)
-    {
-        Auth::user()->token()->revoke();
-
-        return response()->json([
-            'message' => 'Session ended successfully!'
-        ]);
     }
 }

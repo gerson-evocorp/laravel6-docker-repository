@@ -5,6 +5,7 @@ namespace Modules\Auth\Services;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Modules\Entity\Services\UserService;
+// use Modules\Entity\Repositories\UserRepository;
 
 
 class AuthService
@@ -19,7 +20,7 @@ class AuthService
 	public function loginUser($request)
 	{
 		$credentials = request(['email', 'password']);
-
+        // $user = $this->userService->findUserByEmailAndPassword();
         if (!Auth::attempt($credentials))
             return response()->json([
                 'message' => 'invalid_credentials',
@@ -27,7 +28,7 @@ class AuthService
 
         $user = $request->user();
 
-        $tokenResult = $user->createToken('Personal Access Token');
+        $tokenResult = $user->createToken('Web-Cliente');
         $token = $tokenResult->token;
 
         if ($request->remember_me)
@@ -46,5 +47,7 @@ class AuthService
 	public function registerUser($data)
 	{
 		return $this->userService->createUser($data);
-	}
+    }
+    
+
 }

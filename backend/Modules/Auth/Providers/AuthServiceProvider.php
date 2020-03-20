@@ -22,6 +22,7 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerFactories();
         $this->loadMigrationsFrom(module_path('Auth', 'Database/Migrations'));
         Passport::routes();
+        Passport::personalAccessClientId(6);
     }
 
     /**
