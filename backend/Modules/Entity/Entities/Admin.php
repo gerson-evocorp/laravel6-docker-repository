@@ -5,7 +5,7 @@ namespace Modules\Entity\Entities;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use SMartins\PassportMultiauth\HasMultiAuthApiTokens;
+use GViana\PassportMultiauth\HasMultiAuthApiTokens;
 
 class Admin extends Authenticatable
 {

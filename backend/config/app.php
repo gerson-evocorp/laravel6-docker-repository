@@ -175,6 +175,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        GViana\PassportMultiauth\Providers\MultiauthServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class
     ],
 
     /*

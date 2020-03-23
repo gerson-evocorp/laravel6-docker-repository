@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dbf24563a18a8765c68ed9176574b5a3",
+    "content-hash": "d530970e94a107ce432273e135ddc6e4",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -372,8 +372,65 @@
             "time": "2019-07-01T23:21:34+00:00"
         },
         {
+            "name": "gviana/passport-multiauth",
+            "version": "v6.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gerson-evocorp/passport-multiauth.git",
+                "reference": "49a7f17f7d769dfa19973c111509815e541c297b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gerson-evocorp/passport-multiauth/zipball/49a7f17f7d769dfa19973c111509815e541c297b",
+                "reference": "49a7f17f7d769dfa19973c111509815e541c297b",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/passport": "^8.0",
+                "nyholm/psr7": "^1.2",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "orchestra/database": "^4.0",
+                "orchestra/testbench": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GViana\\PassportMultiauth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Martins",
+                    "email": "sfelix_martins@hotmail.com"
+                },
+                {
+                    "name": "Gerson Viana",
+                    "email": "gerson@evocorp.com.br"
+                }
+            ],
+            "description": "Add support to multi-auth on Laravel Passport",
+            "keywords": [
+                "laravel",
+                "multi-auth",
+                "passport"
+            ],
+            "time": "2020-03-23T14:17:15+00:00"
+        },
+        {
             "name": "illuminate/auth",
-            "version": "v7.2.0",
+            "version": "v7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/auth.git",
@@ -424,7 +481,7 @@
         },
         {
             "name": "illuminate/console",
-            "version": "v7.2.0",
+            "version": "v7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
@@ -478,16 +535,16 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v7.2.0",
+            "version": "v7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "15bb16f216d36aa974b14e4a7aa550ffb02ce64a"
+                "reference": "9108edffa95b34df94dc36721d92f380dd59bea3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/15bb16f216d36aa974b14e4a7aa550ffb02ce64a",
-                "reference": "15bb16f216d36aa974b14e4a7aa550ffb02ce64a",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/9108edffa95b34df94dc36721d92f380dd59bea3",
+                "reference": "9108edffa95b34df94dc36721d92f380dd59bea3",
                 "shasum": ""
             },
             "require": {
@@ -518,11 +575,11 @@
             ],
             "description": "The Illuminate Container package.",
             "homepage": "https://laravel.com",
-            "time": "2020-03-10T18:02:27+00:00"
+            "time": "2020-03-18T13:25:12+00:00"
         },
         {
             "name": "illuminate/contracts",
-            "version": "v7.2.0",
+            "version": "v7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -566,7 +623,7 @@
         },
         {
             "name": "illuminate/cookie",
-            "version": "v7.2.0",
+            "version": "v7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cookie.git",
@@ -612,7 +669,7 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v7.2.0",
+            "version": "v7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
@@ -673,7 +730,7 @@
         },
         {
             "name": "illuminate/encryption",
-            "version": "v7.2.0",
+            "version": "v7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/encryption.git",
@@ -720,7 +777,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v7.2.0",
+            "version": "v7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -773,16 +830,16 @@
         },
         {
             "name": "illuminate/http",
-            "version": "v7.2.0",
+            "version": "v7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/http.git",
-                "reference": "e21bf44b3b66e405e78ce9ba8ee6419b479512e2"
+                "reference": "7bd8edddd41c4df3c0b953afbdf4472b1183954f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/http/zipball/e21bf44b3b66e405e78ce9ba8ee6419b479512e2",
-                "reference": "e21bf44b3b66e405e78ce9ba8ee6419b479512e2",
+                "url": "https://api.github.com/repos/illuminate/http/zipball/7bd8edddd41c4df3c0b953afbdf4472b1183954f",
+                "reference": "7bd8edddd41c4df3c0b953afbdf4472b1183954f",
                 "shasum": ""
             },
             "require": {
@@ -821,11 +878,11 @@
             ],
             "description": "The Illuminate Http package.",
             "homepage": "https://laravel.com",
-            "time": "2020-03-17T13:45:32+00:00"
+            "time": "2020-03-20T17:43:27+00:00"
         },
         {
             "name": "illuminate/pipeline",
-            "version": "v7.2.0",
+            "version": "v7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pipeline.git",
@@ -869,7 +926,7 @@
         },
         {
             "name": "illuminate/queue",
-            "version": "v7.2.0",
+            "version": "v7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/queue.git",
@@ -929,7 +986,7 @@
         },
         {
             "name": "illuminate/session",
-            "version": "v7.2.0",
+            "version": "v7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
@@ -980,16 +1037,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v7.2.0",
+            "version": "v7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "68915182f18dca20e6c27b82e4007c11cf25f165"
+                "reference": "91066b0b829ea0ab1315eeaefbe7f191cc31d7a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/68915182f18dca20e6c27b82e4007c11cf25f165",
-                "reference": "68915182f18dca20e6c27b82e4007c11cf25f165",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/91066b0b829ea0ab1315eeaefbe7f191cc31d7a1",
+                "reference": "91066b0b829ea0ab1315eeaefbe7f191cc31d7a1",
                 "shasum": ""
             },
             "require": {
@@ -1038,7 +1095,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2020-03-16T13:40:39+00:00"
+            "time": "2020-03-17T14:26:31+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -1731,16 +1788,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.25",
+            "version": "2.0.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "c18159618ed7cd7ff721ac1a8fec7860a475d2f0"
+                "reference": "09655fcc1f8bab65727be036b28f6f20311c126c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/c18159618ed7cd7ff721ac1a8fec7860a475d2f0",
-                "reference": "c18159618ed7cd7ff721ac1a8fec7860a475d2f0",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/09655fcc1f8bab65727be036b28f6f20311c126c",
+                "reference": "09655fcc1f8bab65727be036b28f6f20311c126c",
                 "shasum": ""
             },
             "require": {
@@ -1819,7 +1876,21 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2020-02-25T04:16:50+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/terrafrost",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/phpseclib",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpseclib/phpseclib",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-03-13T04:15:39+00:00"
         },
         {
             "name": "psr/container",
@@ -2239,58 +2310,6 @@
                 "uuid"
             ],
             "time": "2020-02-21T04:36:14+00:00"
-        },
-        {
-            "name": "smartins/passport-multiauth",
-            "version": "v6.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sfelix-martins/passport-multiauth.git",
-                "reference": "f394bc36bbca0bf728b751e4bcfcf311b9ec0e01"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sfelix-martins/passport-multiauth/zipball/f394bc36bbca0bf728b751e4bcfcf311b9ec0e01",
-                "reference": "f394bc36bbca0bf728b751e4bcfcf311b9ec0e01",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/passport": "^8.0",
-                "php": "^7.2"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.0",
-                "orchestra/database": "^4.0",
-                "orchestra/testbench": "^4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SMartins\\PassportMultiauth\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Samuel Martins",
-                    "email": "sfelix_martins@hotmail.com"
-                }
-            ],
-            "description": "Add support to multi-auth on Laravel Passport",
-            "keywords": [
-                "laravel",
-                "multi-auth",
-                "passport"
-            ],
-            "time": "2020-02-10T13:49:37+00:00"
         },
         {
             "name": "symfony/console",

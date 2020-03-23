@@ -12,7 +12,10 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::prefix('oauth')->group(function(){
+    Route::post('register/user', 'EntityController@registerUser');
 
-Route::middleware('auth:api')->get('/entity', function (Request $request) {
-    return $request->user();
+    Route::group(['middleware' => ['api', 'multiauth:admin']], function () {
+        Route::post('register/admin', 'EntityController@registerAdmin');
+    });
 });

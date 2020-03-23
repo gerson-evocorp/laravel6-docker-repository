@@ -10,13 +10,12 @@
     "require": {
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
+        "gviana/passport-multiauth": "^6.0",
         "laravel/framework": "^6.2",
         "laravel/passport": "^8.4",
         "laravel/tinker": "^2.0",
         "nesbot/carbon": "^2.31",
-        "nwidart/laravel-modules": "^6.2",
-        "smartins/passport-multiauth": "^6.0",
-        "symfony/psr-http-message-bridge": "^2.0"
+        "nwidart/laravel-modules": "^6.2"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
@@ -32,7 +31,9 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [
+                "laravel/passport"
+            ]
         }
     },
     "autoload": {
