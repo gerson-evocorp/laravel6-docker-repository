@@ -1,3 +1,5 @@
+<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+
 ## Introdução
 
 Este projeto o ajudará a montar um ambiente de desenvolvimento **[Laravel](https://laravel.com/)** utilizando o **Docker**. O mesmo contém os principios básicos para produzir um projeto **[Laravel](https://laravel.com/)** além de flexibilizar a criação de *Modules* e o padrão *Service* *and* *Repositorie*.
