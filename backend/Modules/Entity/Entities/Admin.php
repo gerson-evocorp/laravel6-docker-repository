@@ -2,14 +2,16 @@
 
 namespace Modules\Entity\Entities;
 
+use GViana\PassportMultiauth\HasMultiAuthApiTokens;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Database\Eloquent\SoftDeletes;
-use GViana\PassportMultiauth\HasMultiAuthApiTokens;
+use OwenIt\Auditing\Contracts\Auditable;
 
-class Admin extends Authenticatable
+class Admin extends Authenticatable implements Auditable
 {
     use Notifiable, SoftDeletes, HasMultiAuthApiTokens;
+    use \OwenIt\Auditing\Auditable;
 
     /**
      * The attributes that are mass assignable.
@@ -38,4 +40,3 @@ class Admin extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 }
-
