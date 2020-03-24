@@ -120,6 +120,35 @@ Executando esse comando você irá criar um repositorio com base no modelo que v
 
 Para realizar os prcodimentosé necessário ter o [Docker](https://docs.docker.com/install/) e [Docker Composer](https://docs.docker.com/compose/install/) instalado em sua máquina.
 
+
+### Extra: Mensagens de confirmação semântica para git commit
+Veja como uma pequena alteração no seu estilo de mensagem de confirmação pode torná-lo um programador melhor.
+
+Formato: `` <type> (<scope>): <subject> ``
+
+`<scope>` é opcional
+
+* Exemplo
+
+````
+feat: adicionar login para terceiros
+^ --  ^----------------------------^
+|     |
+|     + -> Resumo no tempo presente.
+|
++ -------> Tipo: chore, docs, feat, fix, refactor, style, or test
+````
+
+Mais exemplos:
+
+- `feat`: (novo recurso para o usuário, não um novo recurso para o script de construção)
+- `fix`: (correção de bug para o usuário, não uma correção para um script de construção)
+- `docs`: (alterações na documentação)
+- `style`: (formatação, ponto e vírgula ausente, etc; sem alteração no código de produção)
+- `refactor`: (refatorando o código de produção, por exemplo, renomeando uma variável)
+- `test`: (adicionando testes ausentes, refatorando testes; nenhuma alteração no código de produção)
+- `chore`: (atualizando tarefas grunhidas, etc; nenhuma alteração no código de produção)
+
 ## Considerações Finais
 
 Este tutorial teve como principio descrever como colocar no ar um ambiente de desenvolvimento Laravel o mais rápido possivel, vale ressaltar que não foi esclarecido comandos, tecnologias ou afins porque não era o objetivo do mesmo.
@@ -133,5 +162,6 @@ Repositorios: [repository-patern](https://blog.schoolofnet.com/trabalhando-com-r
         
 Authenticação: [auth-guards](https://pusher.com/tutorials/multiple-authentication-guards-laravel)
 
+Conventional Commits: [Mensagens de confirmação semântica para git commit](https://www.conventionalcommits.org/en/v1.0.0/)
 ```
 
