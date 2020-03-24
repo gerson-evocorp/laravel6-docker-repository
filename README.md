@@ -149,6 +149,31 @@ Mais exemplos:
 - `test`: (adicionando testes ausentes, refatorando testes; nenhuma alteração no código de produção)
 - `chore`: (atualizando tarefas grunhidas, etc; nenhuma alteração no código de produção)
 
+### Extra: Auditoria 
+
+Este pacote o ajudará a entender as mudanças nos seus modelos Eloquent, fornecendo informações sobre possíveis discrepâncias e anomalias que possam indicar preocupações comerciais ou atividades suspeitas.
+
+* Exemplo de Uso
+	* A configuração de um modelo para auditoria não poderia ser mais simples.
+Basta usar a característica `OwenIt\Auditing\Auditable` no modelo que você deseja auditar e implementar`OwenIt\Auditing\Contracts\Auditable` a interface.
+
+```php
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+use OwenIt\Auditing\Contracts\Auditable;
+
+class User extends Model implements Auditable
+{
+    use \OwenIt\Auditing\Auditable;
+
+    // ...
+}
+```
+Feito isso, toda alteração que acontecer nessa entidade será registrada em uma tabela nomeada de `audits` na sua base de dados.
+
 ## Considerações Finais
 
 Este tutorial teve como principio descrever como colocar no ar um ambiente de desenvolvimento Laravel o mais rápido possivel, vale ressaltar que não foi esclarecido comandos, tecnologias ou afins porque não era o objetivo do mesmo.
@@ -159,8 +184,10 @@ Este tutorial teve como principio descrever como colocar no ar um ambiente de de
 Modulos : [laravel-modules](https://medium.com/@destinyajax/how-to-build-modular-applications-in-laravel-the-plug-n-play-approach-part-1-13a87f7de06)
               
 Repositorios: [repository-patern](https://blog.schoolofnet.com/trabalhando-com-repository-no-laravel/)
+
+Auditoria: [laravel-auditing] (https://github.com/owen-it/laravel-auditing)
         
-Authenticação: [auth-guards](https://pusher.com/tutorials/multiple-authentication-guards-laravel)
+Autenticação: [auth-guards](https://pusher.com/tutorials/multiple-authentication-guards-laravel)
 
 Conventional Commits: [Mensagens de confirmação semântica para git commit](https://www.conventionalcommits.org/en/v1.0.0/)
 ```
