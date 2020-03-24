@@ -185,7 +185,7 @@ Modulos : [laravel-modules](https://medium.com/@destinyajax/how-to-build-modular
               
 Repositorios: [repository-patern](https://blog.schoolofnet.com/trabalhando-com-repository-no-laravel/)
 
-Auditoria: [laravel-auditing] (https://github.com/owen-it/laravel-auditing)
+Auditoria: [laravel-auditing](https://github.com/owen-it/laravel-auditing)
         
 Autenticação: [auth-guards](https://pusher.com/tutorials/multiple-authentication-guards-laravel)
 
