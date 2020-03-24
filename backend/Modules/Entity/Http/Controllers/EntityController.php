@@ -25,7 +25,7 @@ class EntityController extends Controller
             'password' => 'required|min:6|confirmed',
         ]);
 
-        $this->userService->registerUser($request->all());
+        $this->userService->createUser($request->all());
 
         return response()->json([
             'message' => 'Account successfully created!'
@@ -40,7 +40,7 @@ class EntityController extends Controller
             'password' => 'required|min:6|confirmed',
         ]);
 
-        $this->userService->registerAdmin($request->all());
+        $this->userService->createUser($request->all());
 
         return response()->json([
             'message' => 'Account successfully created!'

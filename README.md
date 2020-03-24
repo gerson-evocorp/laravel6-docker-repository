@@ -43,10 +43,43 @@ composer update
 
 ## Liberar permissão de escrita
 
-É necessário executar os comandos abaixo para poder ter acesso de leitura e escrita nos arquivos do projeto. Isso é obrigatório fazer, porque o docker por padrão irá procurar um usuário root dentro do container.
+É necessário executar os comandos abaixo para poder ter acesso de leitura e escrita nos arquivos do projeto. Isso é obrigatório fazer, porque o docker por padrão irá procurar um usuário root dentro do container, então você acessa o container como root e executa os seguintes comandos.
 ```
 chown -Rf 1000:1000 .
 chown -Rf www-data:www-data storage/
+```
+Apartir de agora você irá acessar o container com o comando:
+```
+docker-compose exec -u user backend bash
+```
+
+## Configurando autenticação
+O projeto já vem com o modulo de Auth implementado, basta configurá-lo seguindo as instruções abaixo:
+
+* Migrar a estrutura de dados do passport
+```
+php artisan migrate
+```
+* Ao implantar o Passport nos servidores de produção pela primeira vez, você provavelmente precisará executar o comando `passport:keys`. Este comando gera as chaves de criptografia que o Passport precisa para gerar o token de acesso. As chaves geradas geralmente não são mantidas no controle de origem. OBS: para executar este comando você tem que acessar o container como root.
+```
+php artisan passport:keys
+```
+* Antes que seu aplicativo possa emitir tokens por meio da concessão de senha, você precisará criar um cliente de concessão de senha, para isso execute o seguinte comando.
+```
+php artisan passport:client --password
+```
+* Depois de criar um cliente de concessão de senha, você pode solicitar um token de acesso emitindo uma solicitação `POST` para a rota `oauth\token` com o endereço de e-mail e a senha do usuário e o provedor de autenticação. Lembre-se de que essa rota já está registrada pelo método `Passport::routes`, não sendo necessário defini-la manualmente. Se o pedido for bem sucedida, você receberá um e na resposta JSON com `access_token` e `refresh_token` a partir do servidor
+
+```
+{
+	"username": <username>,
+	"password": <password>,
+	"grant_type" : "password",
+	"client_id": <client_id>,
+	"client_secret" : <cleint_secret>,
+	"scope": "",
+	"provider": <provider>
+}
 ```
 
 ## Testando Projeto
