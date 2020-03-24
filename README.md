@@ -48,10 +48,6 @@ composer update
 chown -Rf 1000:1000 .
 chown -Rf www-data:www-data storage/
 ```
-Apartir de agora você irá acessar o container com o comando:
-```
-docker-compose exec -u user backend bash
-```
 
 ## Configurando autenticação
 O projeto já vem com o modulo de Auth implementado, basta configurá-lo seguindo as instruções abaixo:
